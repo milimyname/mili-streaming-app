@@ -21,6 +21,8 @@
 		to your new<br />SvelteKit app
 	</h1>
 
+	<h2 class="text-3xl font-bold underline">Hello world!</h2>
+
 	<h2>
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
