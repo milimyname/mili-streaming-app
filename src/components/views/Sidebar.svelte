@@ -8,27 +8,33 @@
 	<h1 class="text-3xl font-black">lines</h1>
 
 	<nav class="flex flex-1 flex-col justify-center gap-4 text-lg">
-		<a href="/" class="flex	items-center gap-4 text-xl transition-colors hover:text-neutral-500">
-			<Icon
-				src={icons.home}
-				color="black"
-				className="text-neutral-300"
-				size="24"
-				title="Custom icon params"
-			/>
-			<span>{sidebar.en.nav.home}</span>
+		<a
+			href="/"
+			class="flex	items-center gap-4 text-xl transition-colors hover:fill-neutral-500 hover:text-neutral-500"
+		>
+			<Icon src={icons.home} size="24" title={sidebar.en.nav.home.alt} />
+			<span>{sidebar.en.nav.home.name}</span>
 		</a>
-		<a href="/" class="flex items-center gap-4 text-xl">
-			<Icon src={icons.library} color="black" size="24" title="Custom icon params" />
-			<span>{sidebar.en.nav.library}</span>
+		<a
+			href="/library"
+			class="flex	items-center gap-4 text-xl transition-colors hover:fill-neutral-500 hover:text-neutral-500"
+		>
+			<Icon src={icons.library} size="24" title={sidebar.en.nav.library.alt} />
+			<span>{sidebar.en.nav.library.name}</span>
 		</a>
-		<a href="/" class="flex items-center gap-4 text-xl">
-			<Icon src={icons.playlist} color="black" size="24" title="Custom icon params" />
-			<span>{sidebar.en.nav.playlist}</span>
+		<a
+			href="/playlist"
+			class="flex	items-center gap-4 text-xl transition-colors hover:fill-neutral-500 hover:text-neutral-500"
+		>
+			<Icon src={icons.playlist} size="24" title={sidebar.en.nav.playlist.alt} />
+			<span>{sidebar.en.nav.playlist.name}</span>
 		</a>
-		<a href="/" class="flex items-center gap-4 text-xl">
-			<Icon src={icons.trending} color="black" size="24" title="Custom icon params" />
-			<span>{sidebar.en.nav.trending}</span>
+		<a
+			href="/trending"
+			class="flex	items-center gap-4 text-xl transition-colors hover:fill-neutral-500 hover:text-neutral-500"
+		>
+			<Icon src={icons.trending} size="24" title={sidebar.en.nav.trending.alt} />
+			<span>{sidebar.en.nav.trending.name}</span>
 		</a>
 	</nav>
 </aside>
