@@ -6,10 +6,10 @@ import RiSystemNotificationBadgeLine from 'svelte-icons-pack/ri/RiSystemNotifica
 import BiHelpCircle from 'svelte-icons-pack/bi/BiHelpCircle';
 import CgEye from 'svelte-icons-pack/cg/CgEye';
 import AiOutlineHeart from 'svelte-icons-pack/ai/AiOutlineHeart';
-import BiCalendarAlt from 'svelte-icons-pack/bi/BiCalendarAlt';
+import BsCalendar from 'svelte-icons-pack/bs/BsCalendar';
 import VscArrowSmallLeft from 'svelte-icons-pack/vsc/VscArrowSmallLeft';
 import BiSearch from 'svelte-icons-pack/bi/BiSearch';
-import BiLogoKickstarter from 'svelte-icons-pack/bi/BiLogoKickstarter';
+import AiFillPlayCircle from 'svelte-icons-pack/ai/AiFillPlayCircle';
 
 export const icons = {
 	home: RiBuildingsHomeLine,
@@ -20,8 +20,8 @@ export const icons = {
 	help: BiHelpCircle,
 	eye: CgEye,
 	heart: AiOutlineHeart,
-	calendar: BiCalendarAlt,
+	calendar: BsCalendar,
 	arrow: VscArrowSmallLeft,
 	search: BiSearch,
-	k: BiLogoKickstarter
+	play: AiFillPlayCircle
 };

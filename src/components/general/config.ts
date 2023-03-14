@@ -39,3 +39,19 @@ export const header = {
 		}
 	}
 };
+
+export const main = {
+	en: {
+		videoCard: {
+			views: {
+				alt: 'Views count'
+			},
+			likes: {
+				alt: 'Likes count'
+			},
+			postedDate: {
+				alt: 'Post date'
+			}
+		}
+	}
+}

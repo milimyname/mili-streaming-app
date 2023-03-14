@@ -6,7 +6,12 @@
 </script>
 
 <Sidebar />
-<main class="h-full w-full">
-	<Header/>
+<main class="flex h-full w-full flex-col gap-4">
+	<Header />
 	<slot />
+	<div class="h-full w-full overflow-hidden rounded-md bg-white p-10">
+		<div class="inline-block animate-marquee whitespace-nowrap text-2xl text-black">
+			Under Development
+		</div>
+	</div>
 </main>

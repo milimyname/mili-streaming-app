@@ -1,6 +1,6 @@
-<script>
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+	import PaginationBtn from '$src/components/PaginationBtn.svelte';
+	import VideoCard from '$src/components/VideoCard.svelte';
 </script>
 
 <svelte:head>
@@ -8,4 +8,13 @@
 	<meta name="description" content="Video Streaming Platform" />
 </svelte:head>
 
-<h1 class="text-2xl first-letter:text-lg underline">Hi</h1>
+<section class="flex flex-col gap-5 rounded-md bg-white p-10">
+	<div class="flex justify-between">
+		<h1 class=" text-5xl font-bold ">POV</h1>
+		<PaginationBtn />
+	</div>
+	<div class="flex gap-5">
+		<VideoCard />
+		<VideoCard />
+	</div>
+</section>
