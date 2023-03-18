@@ -1,26 +1,21 @@
-<svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
-</svelte:head>
+<script>
+	import { signIn, signOut } from '@auth/sveltekit/client';
+	import { page } from '$app/stores';
+</script>
 
-<div class="text-column">
-	<h1>About this app</h1>
-
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>
-		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-		using it with JavaScript disabled!
-	</p>
-</div>
+<h1>SvelteKit Auth Example</h1>
+<p>
+	{#if $page.data.session}
+		{#if $page.data.session.user?.image}
+			<span style="background-image: url('{$page.data.session.user.image}')" class="avatar" />
+		{/if}
+		<span class="signedInText">
+			<small>Signed in as</small><br />
+			<strong>{$page.data.session.user?.name ?? 'User'}</strong>
+		</span>
+		<button on:click={() => signOut()} class="button">Sign out</button>
+	{:else}
+		<span class="notSignedInText">You are not signed in</span>
+		<button on:click={() => signIn('github')}>Sign In with GitHub</button>
+	{/if}
+</p>

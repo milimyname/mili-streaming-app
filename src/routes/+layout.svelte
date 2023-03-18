@@ -11,7 +11,7 @@
 	<slot />
 	<div class="h-full w-full overflow-hidden rounded-md bg-white p-10">
 		<div class="inline-block animate-marquee whitespace-nowrap text-2xl text-black">
-			Under Development
+			Under Development. Say Hi to me on Twitter @mili.myname
 		</div>
 	</div>
 </main>

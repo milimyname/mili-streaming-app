@@ -4,8 +4,10 @@
 	import { sidebar } from '$src/components/general/config';
 </script>
 
-<aside class="flex h-full flex-col items-center justify-between rounded-md bg-white p-10">
-	<h1 class="text-3xl font-black">lines</h1>
+<aside class="hidden h-full flex-col items-center justify-between rounded-md bg-white p-10 lg:flex">
+	<a href="/">
+		<h1 class="text-3xl font-black">lines</h1>
+	</a>
 
 	<nav class="flex flex-1 flex-col justify-center gap-4 text-lg">
 		<a
