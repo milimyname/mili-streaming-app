@@ -7,7 +7,7 @@
 <p>
 	{#if $page.data.session}
 		{#if $page.data.session.user?.image}
-			<span style="background-image: url('{$page.data.session.user.image}')" class="avatar" />
+			<img src={$page.data.session.user?.image} class="h-10 w-10 rounded-full" alt="User" />
 		{/if}
 		<span class="signedInText">
 			<small>Signed in as</small><br />

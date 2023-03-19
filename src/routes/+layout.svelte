@@ -9,7 +9,7 @@
 <main class="flex h-full w-full flex-col gap-4">
 	<Header />
 	<slot />
-	<div class="h-full w-full overflow-hidden rounded-md bg-white p-10">
+	<div class="mt-auto w-full overflow-hidden rounded-md bg-white p-10">
 		<div class="inline-block animate-marquee whitespace-nowrap text-2xl text-black">
 			Under Development. Say Hi to me on Twitter @mili.myname
 		</div>
