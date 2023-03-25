@@ -14,6 +14,7 @@
 	});
 
 	function animateTyping() {
+		if (!span) return;
 		if (index < text.length) {
 			span.textContent += text.charAt(index);
 			index++;

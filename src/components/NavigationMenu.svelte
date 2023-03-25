@@ -64,9 +64,7 @@
 			on:focus={() => showDropdown()}
 		>
 			<li>
-				<a href="/user/upload" class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-					>Upload Video</a
-				>
+				<a href="/upload" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Upload Video</a>
 			</li>
 			<li>
 				<button
