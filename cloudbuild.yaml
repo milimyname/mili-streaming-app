@@ -38,3 +38,6 @@ steps:
       - '3000'
       - '--memory'
       - '512M'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
