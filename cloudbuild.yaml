@@ -7,8 +7,6 @@ steps:
       - 'docker-compose.yml'
       - 'build'
       - '--pull'
-      - '--build-arg'
-      - 'NODE_ENV=production'
       - 'sveltekit'
 
   # Tag the Docker image with the Cloud Run service URL
