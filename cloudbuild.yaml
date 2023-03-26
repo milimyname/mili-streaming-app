@@ -1,6 +1,6 @@
 steps:
   # Build the SvelteKit app and create a Docker image
-  - name: 'docker/compose:1.29.2'
+  - name: 'docker/compose:2.15.1'
     id: 'build'
     args:
       - '-f'
@@ -14,7 +14,7 @@ steps:
     id: 'tag'
     args: ['tag', 'sveltekit', 'gcr.io/winter-field-381117/mili-streaming-app']
 
-  # Push the Docker image to Google Container Registry
+  # Push the Docker image to Google Contain2er Registry
   - name: 'gcr.io/cloud-builders/docker'
     id: 'push'
     args: ['push', 'gcr.io/winter-field-381117/mili-streaming-app']
