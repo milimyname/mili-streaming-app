@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { env } from '$env/dynamic/public';
 	import { redirect } from '@sveltejs/kit';
 
 	let uploading = false;
@@ -13,16 +14,16 @@
 		uploading = true;
 
 		// Upload the video
-		const response = await fetch('http://localhost:8080/upload', {
+		const response = await fetch(`${env.PUBLIC_DEV}/upload`, {
 			method: 'POST',
 			body: formData
 		});
 
-		if (response.ok) alert('Video uploaded successfully');
+		if (response.ok) console.log('Video uploaded successfully');
 		else console.error('Error uploading video:', response.statusText);
 		uploading = false;
 
-		redirect(300, `/video/${e.target[0].files[0].name.replace('', '%20')}`);
+		redirect(302, `/video/${e.target[0].files[0].name.replace(' ', '%20')}`);
 	}
 </script>
 
@@ -36,12 +37,14 @@
 		>
 			Uploading...
 		</p>
+	{:else}
+		<p class="absolute -top-10 left-0 text-2xl text-black">Nothing to upload</p>
 	{/if}
 	<input
 		type="file"
 		id="video"
 		class="text-sm text-black
-        transition-colors	
+        transition-colors
       file:mr-4 file:rounded-full file:border-0
       file:bg-black file:py-2
       file:px-4 file:text-sm
@@ -52,7 +55,7 @@
 	/>
 	<button
 		type="submit"
-		class="active:bg-violet-700bg-violet-500 rounded-full bg-violet-500 px-5 py-2 text-sm font-semibold leading-5 text-white  active:bg-violet-700"
+		class="active:bg-violet-700bg-violet-500 rounded-full bg-violet-500 px-5 py-2 text-sm font-semibold leading-5 text-white active:bg-violet-700"
 		>Upload</button
 	>
 </form>

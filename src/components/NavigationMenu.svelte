@@ -26,6 +26,14 @@
 
 	const showDropdown = () => innerWidth > 1024 && (isOpen = true);
 	const hideDropdown = () => innerWidth > 1024 && (isOpen = false);
+
+	const test = () => {
+		try {
+			signIn('github');
+		} catch (error) {
+			console.log(error);
+		}
+	};
 </script>
 
 <svelte:window on:click={clickOutside} on:keydown={focusSearch} bind:innerWidth />
@@ -47,7 +55,7 @@
 		</button>
 	{:else}
 		<button
-			on:click={() => signIn('github')}
+			on:click={test}
 			class="rounded-md bg-black py-2 px-5 font-medium text-white outline-none transition-transform group-hover:cursor-pointer"
 		>
 			Log in
@@ -56,7 +64,7 @@
 
 	{#if $page.data.session}
 		<ul
-			class="absolute right-0 z-10 mt-2 w-48 rounded-lg border bg-white  shadow-lg transition-all  duration-500  {isOpen
+			class="absolute right-0 z-10 mt-2 w-48 rounded-lg border bg-white shadow-lg transition-all duration-500 {isOpen
 				? 'top-full opacity-100 '
 				: 'top-0   opacity-0'}"
 			on:mouseover={() => showDropdown()}

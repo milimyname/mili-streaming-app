@@ -4,6 +4,7 @@
 	import Sidebar from '$src/components/views/Sidebar.svelte';
 	import Header from '$src/components/views/Header.svelte';
 	import { onMount } from 'svelte';
+	import { env } from '$env/dynamic/public';
 
 	let videos: {
 		names: string[];
@@ -11,7 +12,7 @@
 
 	// Get all videos from the server
 	onMount(async () => {
-		const response = await fetch('http://localhost:8080/');
+		const response = await fetch(`${env.PUBLIC_DEV}`);
 		const names = await response.json();
 		videos = names;
 	});
