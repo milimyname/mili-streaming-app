@@ -9,12 +9,12 @@ steps:
       - '--pull'
       - '--build-arg'
       - 'NODE_ENV=production'
-      - 'app'
+      - 'sveltekit'
 
   # Tag the Docker image with the Cloud Run service URL
   - name: 'gcr.io/cloud-builders/docker'
     id: 'tag'
-    args: ['tag', 'app', 'gcr.io/winter-field-381117/mili-streaming-app']
+    args: ['tag', 'sveltekit', 'gcr.io/winter-field-381117/mili-streaming-app']
 
   # Push the Docker image to Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
