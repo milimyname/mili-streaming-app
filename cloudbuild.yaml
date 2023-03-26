@@ -1,0 +1,40 @@
+steps:
+  # Build the SvelteKit app and create a Docker image
+  - name: 'docker/compose:1.29.2'
+    id: 'build'
+    args:
+      - '-f'
+      - 'docker-compose.yml'
+      - 'build'
+      - '--pull'
+      - '--build-arg'
+      - 'NODE_ENV=production'
+      - 'app'
+
+  # Tag the Docker image with the Cloud Run service URL
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'tag'
+    args: ['tag', 'app', 'gcr.io/winter-field-381117/mili-streaming-app']
+
+  # Push the Docker image to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'push'
+    args: ['push', 'gcr.io/winter-field-381117/mili-streaming-app']
+
+  # Deploy the Docker image to Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'deploy'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'mili-streaming-app'
+      - '--image'
+      - 'gcr.io/winter-field-381117/mili-streaming-app'
+      - '--platform'
+      - 'managed'
+      - '--region'
+      - 'europe-west3'
+      - '--port'
+      - '3000'
+      - '--memory'
+      - '512M'
