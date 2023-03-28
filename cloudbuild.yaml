@@ -11,6 +11,16 @@ steps:
       - '--file'
       - 'Dockerfile.prod'
       - '.'
+      env:
+      - 'PUBLIC_CLOUD_STORAGE_URL=${_PUBLIC_CLOUD_STORAGE_URL}'
+      - 'GITHUB_ID=${_GITHUB_ID}'
+      - 'GITHUB_SECRET=${_GITHUB_SECRET}'
+      - 'AUTH_SECRET=${_AUTH_SECRET}'
+      - 'AUTH_TRUST_HOST=${_AUTH_TRUST_HOST}'
+      - 'PUBLIC_DEV=${_PUBLIC_DEV}'
+      - 'PUBLIC_PROD=${_PUBLIC_PROD}'
+      - 'ORIGIN=${_ORIGIN}'
+
 
   # Push the Docker image to Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
