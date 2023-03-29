@@ -11,5 +11,6 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-# Igonre all files with .perm 
-*.*.perm
+# Igonre files with .perm in the folder nginx/dev
+nginx/dev/local.cert.pem
+nginx/dev/local.key.pem
