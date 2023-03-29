@@ -10,7 +10,6 @@ specifiers:
   '@sveltejs/kit': ^1.14.0
   '@types/cookie': ^0.5.1
   '@types/node': ^18.15.11
-  add: ^2.0.6
   autoprefixer: ^10.4.14
   postcss: ^8.4.21
   prettier: ^2.8.7
@@ -28,7 +27,6 @@ dependencies:
   '@auth/core': 0.5.1
   '@auth/sveltekit': 0.3.0_lf6au6meqv7vifrzzrxlnbokqm
   '@fontsource/mada': 4.5.10
-  add: 2.0.6
   svelte-icons-pack: 2.1.0
 
 devDependencies:
@@ -450,10 +448,6 @@ packages:
   /@types/resolve/1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
     dev: true
-
-  /add/2.0.6:
-    resolution: {integrity: sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==}
-    dev: false
 
   /any-promise/1.3.0:
     resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
