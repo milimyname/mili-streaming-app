@@ -7,7 +7,7 @@ services:
       context: ./
       dockerfile: ./Dockerfile.prod
     ports:
-      - 5050:5050
+      - 3000:3000
     volumes:
       - ./:/usr/src/app
       - /usr/src/app/node_modules

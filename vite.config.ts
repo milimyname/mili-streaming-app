@@ -24,7 +24,7 @@ const config = {
 			clientPort: 5050
 		},
 		host: '0.0.0.0',
-		port: 5050,
+		port: 3000,
 		https: httpsConfig
 	}
 };

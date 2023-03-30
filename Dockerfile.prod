@@ -24,6 +24,6 @@ COPY --from=0 /app .
 
 COPY . .
 
-EXPOSE 5050
+EXPOSE 3000
 
 CMD ["node", "./build"]

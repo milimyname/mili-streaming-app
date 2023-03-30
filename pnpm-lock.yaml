@@ -14,7 +14,7 @@ specifiers:
   postcss: ^8.4.21
   prettier: ^2.8.7
   prettier-plugin-svelte: ^2.10.0
-  prettier-plugin-tailwindcss: ^0.2.5
+  prettier-plugin-tailwindcss: ^0.2.6
   svelte: ^3.57.0
   svelte-check: ^3.1.4
   svelte-icons-pack: ^2.1.0
@@ -40,7 +40,7 @@ devDependencies:
   postcss: 8.4.21
   prettier: 2.8.7
   prettier-plugin-svelte: 2.10.0_5ir2xprf4ygk6mygilwnltaw3a
-  prettier-plugin-tailwindcss: 0.2.5_ur4yhozmpa5c7u2hssnpuxkrki
+  prettier-plugin-tailwindcss: 0.2.6_ur4yhozmpa5c7u2hssnpuxkrki
   svelte: 3.57.0
   svelte-check: 3.1.4_sd5d5bwhwct4qrvp7ra4wv5wou
   tailwindcss: 3.3.0_postcss@8.4.21
@@ -516,7 +516,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001472
-      electron-to-chromium: 1.4.342
+      electron-to-chromium: 1.4.343
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
     dev: true
@@ -623,8 +623,8 @@ packages:
     resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
     dev: true
 
-  /electron-to-chromium/1.4.342:
-    resolution: {integrity: sha512-dTei3VResi5bINDENswBxhL+N0Mw5YnfWyTqO75KGsVldurEkhC9+CelJVAse8jycWyP8pv3VSj4BSyP8wTWJA==}
+  /electron-to-chromium/1.4.343:
+    resolution: {integrity: sha512-22C6pOljO+QQ/yeBZJkxewjsGwSKCXymng7dF8lir3m8iJGi6guoLVkK8jghCf3o0/tARFASAgLP8OzR9SKRCA==}
     dev: true
 
   /es6-promise/3.3.1:
@@ -1113,8 +1113,8 @@ packages:
       svelte: 3.57.0
     dev: true
 
-  /prettier-plugin-tailwindcss/0.2.5_ur4yhozmpa5c7u2hssnpuxkrki:
-    resolution: {integrity: sha512-vZ/iKieyCx0WTxHbkf5E1rBlv/ybFk8WTT4hL5W2jlVxum2Zbe0jMUpuQdDrpa4z2vnPiJ5KIWCqL/kd16fKYg==}
+  /prettier-plugin-tailwindcss/0.2.6_ur4yhozmpa5c7u2hssnpuxkrki:
+    resolution: {integrity: sha512-F+7XCl9RLF/LPrGdUMHWpsT6TM31JraonAUyE6eBmpqymFvDwyl0ETHsKFHP1NG+sEfv8bmKqnTxEbWQbHPlBA==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
