@@ -16,6 +16,14 @@ It is a video streaming platform where users can watch videos and also upload th
 
 ## Run Docker Compose for Development
 
+Create a private key and certificate using mkcert
+
+```bash
+mkcert -install -key-file local.key.pem -cert-file local.cert.pem localhost foo.local
+```
+
+nginx/dev/local.cert.pem & nginx/dev/local.key.pem need to be created
+
 ```bash
 docker-compose -f docker-compose.dev.yml up --build
 ```
